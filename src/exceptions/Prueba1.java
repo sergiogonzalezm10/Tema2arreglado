@@ -1,6 +1,6 @@
 package exceptions;
 
-import com.sun.tools.javac.parser.Scanner;
+import java.util.Scanner;
 
 public class Prueba1 {
 
@@ -17,7 +17,7 @@ public class Prueba1 {
 		assert edad >= 0 && edad <=130 : "La edad no es válida";
 		
 		//Mostramos la edad
-		System.out.println("La edad introducida es válida: " + edad);
+
 		
 		//Cerramos el escáner
 		scanner.close();

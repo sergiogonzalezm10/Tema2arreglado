@@ -6,35 +6,29 @@ public class Ejercicio7 {
 
 	public static void main(String[] args) {
 		
-		int n;
-		
-	      	Scanner sc = new Scanner(System.in);
-	        
-	        System.out.print("Introduce el número de filas de la pirámide: ");
-	        n = sc.nextInt();
-	        
-	        // Bucle para cada fila
-	        for (int i = 1; i <= n; i++) {
-	            //1. Espacios iniciales para centrar la pirámide
-	            for (int j = 1; j <= n - i; j++) {
-	                System.out.print(" ");
-	            }
+		Scanner sc = new Scanner(System.in);
 
-	            //2. Parte ascendente: del 1 hasta i
-	            for (int j = 1; j <= i; j++) {
-	                System.out.print(j);
-	            }
+        System.out.print("Introduce un número n: ");
+        int n = sc.nextInt();
 
-	            //3. Parte descendente: de i-1 hasta 1
-	            for (int j = i - 1; j >= 1; j--) {
-	                System.out.print(j);
-	            }
+        // Generar la pirámide
+        for (int i = 1; i <= n; i++) {
 
-	            //Salto de línea al final de la fila
-	            System.out.println();
-	        }
-	        
-	        //Cierre escáner
-	        sc.close();
-	    }
-	}
+            // Parte creciente: 1 hasta i
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            // Parte decreciente: i-1 hasta 1
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+            
+            // Salto de línea al final de cada fila
+            System.out.println(); 
+        }
+        
+        //Cierre escáner
+        sc.close();
+    }
+}
