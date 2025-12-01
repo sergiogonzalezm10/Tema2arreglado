@@ -17,27 +17,31 @@ public class Ejercicio8 {
         System.out.print("Dime un número: ");
         int numero = sc.nextInt();
 
-        // El bucle continúa mientras numero NO sea 0
+        // El bucle continúa mientras numero no sea 0
         while (numero != 0) {
+	        	
+        	//Contamos el número introducido
+            total++; 
 
-            total++; // contamos el número introducido
-
+            // Comprobamos si el número es mayor que el anterior
             if (numero > anterior) {
-                // correcto → actualizamos
                 anterior = numero;
+           //Sino, contamos un fallo
             } else {
-                // fallo
                 System.out.println("Fallo es menor.");
                 fallos++;
             }
 
+            // Pedimos el siguiente número
             System.out.print("Dime un número: ");
-            numero = sc.nextInt(); // pedimos el siguiente número
+            numero = sc.nextInt(); 
         }
-
+        
+        // Mostramos los resultados
         System.out.println("Total de números introducidos: " + total);
         System.out.println("Números fallados: " + fallos);
-
+        
+        //Cierre escáner
         sc.close();
     }
 }
